@@ -1,0 +1,70 @@
+{% extends 'htmls/layout.html' %}
+
+{% block content %}
+  
+  <main>
+    {% load static %}
+        <center>
+            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">"SOBRE NOSOTROS"</h1>
+            <hr>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide ">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active" data-bs-interval="1000">
+                                <img src="{% static 'img/Nosotros1.jpg' %}" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item" data-bs-interval="2000">
+                                <img src="{% static 'img/Nosotros3.jpg' %}" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{% static 'img/Nosotros4.jpg' %}" class="d-block w-100" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-12">
+                                <div class="card-body">
+                                  <h2 class="card-title" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Pâques</h2>
+                                  <h4 style="font-family:Georgia, 'Times New Roman', Times, serif;">Bienvenidos a Nuestra Chocolateria</h4>
+                                  <p class="card-text">Te estarás preguntando - ¿Quiénes Somos? - Nosotros somos una chocolatería especializada en la creación de 
+                                                      "Huevitos de Pascua", por esto como ya debes deducir, nuestros huevitos están disponibles durante todo el año y 
+                                                      se encuentran en constante progreso (nuevos sabores, diseños, moldes y envolturas). Aunque debemos recordarte que
+                                                       no por esto dejamos de lado las clásicas tabletas de chocolate, bombones, paletas, bolitas rellenas con frutos secos,
+                                                        entre muchos otros productos que se encuentran disponible en nuestra página Web. 
+                                                        Pero - ¿Por qué nos especializamos en huevitos de Pascua?
+                                                         – Porque queríamos que esta hermosa magia que nos traían específicamente estos chocolatitos no quedara
+                                                          solo en una época o fuera por una fecha especial del año, sino que cualquier día del año pudiéramos volver 
+                                                          en el tiempo y seguir sintiendo la magia de cuando éramos niños o por otro lado, sorprender con este pequeño
+                                                           gran detalle.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+        </center>
+
+    
+    </main>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+{% endblock %}

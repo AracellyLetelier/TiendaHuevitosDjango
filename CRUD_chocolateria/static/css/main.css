@@ -1,0 +1,62 @@
+/* lo ocupo para el boton de ingresa que hace que el texto este al centro ,tenga espacio con el boton de al lado 
+y por ultimo que modifique su ancho*/
+.espaciado{
+    margin-left: 10px;
+    text-align: center;
+    width: 80px;
+    background-color: inherit;
+}
+/* cambio la manera en que se ve el boton de inicio de sesion y registro */
+.linkmodal{
+    text-decoration: none;
+    color: aliceblue;
+}
+.tamañocarrusel{
+    width: 8rem;
+}
+
+.tamañoIMG{
+    max-width: 100%;
+    height: auto;
+}
+/* tamaño del logo */
+.f_logo{
+    width: 187px;
+    height: 79px;
+}
+.f_logo2{
+    width: 100px;
+    height: 40px;
+}
+/* para que se ajuste al centro y con un tamño que se vea bn */
+.cardObras {
+    max-width: 100%;
+    height: auto;
+}
+.borde2{
+    border: none;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tamaño_inicio{
+    width: 4rem;
+    height: 8rem;
+}
+#offcanvasExample{
+    width: 500px;
+    height: 100%;
+    
+}
+.table-info{
+    border: 1px solid;
+    border-color: aqua;
+    text-align: center;
+}
+.offcanvas-header{
+    text-align: center;
+}
+.offcanvas-body{
+    height: 100%    ;
+}

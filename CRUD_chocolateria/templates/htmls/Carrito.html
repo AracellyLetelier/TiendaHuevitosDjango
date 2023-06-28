@@ -1,0 +1,54 @@
+{% extends 'htmls/layout.html' %}
+
+{% block content %}
+  
+  <main>
+    {% load static %}
+        <div class="container">
+          <table class="table-info">
+            <tcaption>Carrito de Compra </tcaption>
+            <thead>
+              <tr class="table-info">
+                <th class="table-info">Producto</th>
+                <th class="table-info">Descripcion</th>
+                <th class="table-info">Cantidad</th>
+                <th class="table-info">Precio</th>
+                <th class="table-info">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info">
+                <td class="table-info">Caritas de conejito Extra Crocante</td>
+                <td class="table-info"></td>
+                <td class="table-info">1</td>
+                <td class="table-info">$20000</td>
+                <td class="table-info">$20000</td>
+              </tr>
+              <tr class="table-info">
+                <td class="table-info">Huevo de pascua relleno de Brownie</td>
+                <td class="table-info"></td>
+                <td class="table-info">3</td>
+                <td class="table-info">$25000</td>
+                <td class="table-info">$75000</td>
+              </tr>
+              <tr class="table-info">
+                <td class="table-info">Conejito de Chocolate</td>
+                <td class="table-info"></td>
+                <td class="table-info">2</td>
+                <td class="table-info">30000</td>
+                <td class="table-info">60000</td>
+              </tr>
+              <tr class="table-info">
+                <td class="table-info">Huevo de pascua 40% dulce de leche</td>
+                <td class="table-info"></td>
+                <td class="table-info">2</td>
+                <td class="table-info">35000</td>
+                <td class="table-info">70000</td>
+              </tr>
+            </tbody>
+
+          </table>
+          
+        </div>
+    </main>
+{% endblock %}

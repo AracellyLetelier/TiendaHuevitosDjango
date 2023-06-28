@@ -1,0 +1,61 @@
+{% extends 'htmls/layout.html' %}
+
+{% block content %}
+  <main>
+    {% load static %}
+      <!-- carrusel de imagenes -->
+      <div class="div">
+          <div class="row">
+            <center>
+              <div class="col-4">
+                <form method="POST">
+                  {% csrf_token %}
+                  <img
+                    class="mb-4"
+                    src=" {% static 'img/fondo inicio.png' %}"Nosotros1
+                    alt=""
+                    width="72"
+                    height="57"
+                  />
+                  <h1 class="h3 mb-3 fw-normal">Iniciar Sesion</h1>
+
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      name="username"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="nombre usuario"
+                    />
+                    <label for="floatingInput">Correo electronico</label>
+                  </div>
+                  <div class="form-floating">
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control"
+                      id="floatingPassword"
+                      placeholder="Password"
+                    />
+                    <label for="floatingPassword">Contraseña</label>
+                  </div>
+
+                  <div class="checkbox mb-3">
+                    <label>
+                      <input type="checkbox" value="remember-me" /> Recordarme
+                    </label>
+                  </div>
+                  <button class="w-100 btn btn-lg btn-primary" type="submit">
+                    Iniciar Sesion
+                  </button>
+                  <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
+                </form>
+              </div>
+            </center>
+          </div>
+      </div>
+      <!-- fin del carrusel de imagenes -->
+    </main>
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+ 
+{% endblock %}

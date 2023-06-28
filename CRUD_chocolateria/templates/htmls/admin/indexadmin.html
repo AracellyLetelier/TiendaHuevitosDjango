@@ -1,0 +1,51 @@
+{% extends "htmls/admin/layoutAdmin.html" %}
+
+{% block content %}
+
+  <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      {% load static %}
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Bienvenido al Sistema {{user.username}}</h1>
+        
+      </div>
+      <div>
+          <center>
+              <caption>
+                  <h3>Listado de Productos en la tienda </h3>
+              </caption>
+          </center>
+          <table class="table">
+              <tr>
+                <th>
+                    <center>
+                      <a href="{% url 'form_savepro' %}" class="btn btn-primary">Registrar Producto</a>
+                    </center>
+                </th>
+              </tr>
+              <tr>
+                <th>Nombre Producto</th>
+                <th>precio</th>
+                <th>Stock</th>
+                <th>Categoria</th>
+                <th>Acción</th>
+              </tr>
+              {% for p in Productos %}
+                <tr>
+                  <td>{{p.descripcion}}</td>
+                  <td>{{p.precio}}</td>
+                  <td>{{p.Stock}}</td>
+                  <td>{{p.Categoria}}</td>
+                  <td>          
+                    <a href="{% url 'form_modpro' p.descripcion %}" class="btn btn-primary">Modificar</a>
+                      <!--  -->
+                    <a href="{% url 'delete_Producto' p.descripcion %}" class="btn btn-danger">Eliminar</a> 
+                      <!--  -->
+                  </td>
+                </tr>
+              {% endfor %}
+            </table>
+      </div>
+    </main>
+
+{% endblock %} 
+

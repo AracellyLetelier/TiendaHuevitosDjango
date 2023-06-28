@@ -1,0 +1,174 @@
+{% extends 'htmls/layout.html' %}
+
+{% block content %}
+  
+  <main>
+    {% load static %}
+      <div class="container">
+        <center>
+          <br />
+          <h1>Formulario de Registro</h1>
+          <br />
+          <hr />
+        </center>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+          <div class="col">
+            <div class="form-group">
+              <label> Nombre Completo</label>
+              <input
+                type="text"
+                class="form-control"
+                name="txtNombreCompleto"
+                id="txtNombreCompleto"
+                maxlength="120"
+              /><!-- maxlenght es para darle un tmaaño max a lo que intrpduce en el input -->
+              <label> Edad</label>
+              <input
+                type="number"
+                class="form-control"
+                name="txtEdad"
+                id="txtEdad"
+                maxlenght="2"
+              />
+  
+              <label> Nro Documento Verificador </label>
+              <input
+                type="text"
+                class="form-control"
+                name="txtNroDocumento"
+                id="txtNroDocumento"
+              />
+              <center>
+                <div class="form-chek">
+                  <!-- para ordenar formulario de radio button o check -->
+                  <label class="form-check-label"> Rut </label>
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="RadioDocumento"
+                    id="RadioRut"
+                    value="R"
+                  />
+                  <label class="form-check-label"> Pasaporte</label>
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="RadioDocumento"
+                    id="RadioPasaporte"
+                    value="P"
+                  />
+                </div>
+              </center>
+            </div>
+            <br />
+            <label> Correo</label>
+            <input
+              type="email"
+              name="txtemail"
+              id="txtemail"
+              class="form-control"
+            />
+            <label>Contraseña</label>
+            <input
+              type="password"
+              name="txtContraseña"
+              id="txtContraseña"
+              class="form-control"
+              placeholder="Debe tener un minimo de 9 caracteres"
+            />
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <br />
+              <label> Numero de Contacto</label>
+              <input
+                type="text"
+                name="txtnumero"
+                id="txtnumero"
+                class="form-control"
+                placeholder="Ej:(+569 123456789 )"
+                maxlength="9"
+              />
+              <br />
+              <div class="form-chek">
+                <!-- para ordenar formulario de radio button o check -->
+                <label class="form-check-label"> Genero : Masculino</label>
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="RadioGenero"
+                  id="RadioMasculino"
+                  value="M"
+                />
+                <label class="form-check-label"> Femenino</label>
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="RadioGenero"
+                  id="RadioFemenino"
+                  value="F"
+                />
+                <label class="form-check-label"> Otro</label>
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="RadioGenero"
+                  id="RadioOtro"
+                  value="O"
+                />
+              </div>
+              <br />
+              <label> Ciudad de Residencia</label>
+              <select name="cbxCiudad" id="cbxCiudad" class="form-select">
+                <option value="1">Santiago</option>
+                <option value="2">Valparaiso</option>
+                <option value="3">Viña del mar</option>
+                <option value="4">Villa Alemana</option>
+              </select>
+              <br />
+              <label> Comuna de Residencia</label>
+              <select name="cbxComuna" id="cbxComuna" class="form-select">
+                <optgroup label="Region Metropolitana">
+                  <option value="1">Santiago Centro</option>
+                  <option value="2">Pudahuel</option>
+                  <option value="3">Maipu</option>
+                  <option value="4">Providencia</option>
+                </optgroup>
+                <optgroup label="Region de Valparaiso">
+                  <option value="1">Valparaiso</option>
+                  <option value="2">Viña del mar</option>
+                  <option value="3">Con Con</option>
+                  <option value="4">Reñaca</option>
+                </optgroup>
+              </select>
+              <br />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <center>
+          <div class="form-group">
+            <label>Comentario</label>
+            <textarea
+              name="txtAreaComentario"
+              id="txtAreaComentario"
+              class="form-control"
+              rows="4"
+              style="width: 40rem"
+            ></textarea>
+          </div>
+          <br />
+          <div class="form-group">
+            <input
+              type="submit"
+              class="btn btn-primary"
+              id="btnEnviarU"
+              value="Enviar"
+            />
+            <button class="btn btn-danger" id="btnLimpiarU">Limpiar</button>
+          </div>
+        </center>
+      </div>
+    </main>
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+{% endblock %}

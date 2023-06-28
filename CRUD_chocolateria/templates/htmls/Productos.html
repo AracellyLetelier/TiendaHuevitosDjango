@@ -1,0 +1,182 @@
+{% extends 'htmls/layout.html' %}
+
+{% block content %}
+  
+  <main>
+    {% load static %}
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <center><h5 class="offcanvas-title" id="offcanvasExampleLabel">Sus productos: </h5></center>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <div class="container">
+              <table class="table-info table-borde">
+                <thead>
+                  <tr class="table-info ">
+                    <th class="table-info">Producto</th>
+                    <th class="table-info">Cantidad</th>
+                    <th class="table-info">Precio</th>
+                    <th class="table-info">Total</th>
+                  </tr>
+                  <hr>
+                </thead>
+                <tbody class="table-borde">
+                  <tr class="table-info">
+                    <td class="table-info">Caritas de conejito Extra Crocante</td>
+                    <td class="table-info">1</td>
+                    <td class="table-info">$20.000</td>
+                    <td class="table-info">$20.000</td>
+                  </tr>
+                  <tr class="table-info">
+                    <td class="table-info">Huevo de pascua relleno de Brownie</td>
+                    <td class="table-info">3</td>
+                    <td class="table-info">$25.000</td>
+                    <td class="table-info">$75.000</td>
+                  </tr>
+                  <tr class="table-info">
+                    <td class="table-info">Conejito de Chocolate</td>
+                    <td class="table-info">2</td>
+                    <td class="table-info">$30.000</td>
+                    <td class="table-info">$60.000</td>
+                  </tr>
+                  <tr class="table-info">
+                    <td class="table-info">Huevo de pascua 40% dulce de leche</td>
+                    <td class="table-info">2</td>
+                    <td class="table-info">$35.000</td>
+                    <td class="table-info">$70.000</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              <h4 id="temperatura"></h4>
+              <h4 id="viento"></h4>
+              <div class="offcanvas-footer">
+                  <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                          <button type="button" class="btn btn-secondary"><a class="linkmodal"
+                              href="Productos.html">Seguir Comprando</a></button>
+                        </div>
+                        <div class="col-6">
+                          <button type="button" class="btn btn-secondary"><a class="linkmodal"
+                              href="Index.html">Finalizar Compra</a></button>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+             <footer>
+                
+                </div>
+  
+              </footer>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+        <!-- carrusel de imagenes -->
+        <center>
+            <h1>Nuestra Coleccion</h1>
+            <hr>
+            <div class="container">
+                <div class="row">
+                    <!-- --------------------------------------------------------------- -->
+                    {% for p in Productos %}
+                      <div class="col-6">
+                            <div class="card " style="width: 25rem; border: none;">
+                              <div class="container borde2 ">
+                                <a href="" >
+                                  <center>
+                                    <!-- <img  src="{% static 'img/Huevo2.jpg' %}" class="card-img-top cardObras" alt="huevo 1"> -->
+                                    <img  src="{{p.file.url}}" class="card-img-top cardObras" alt="huevo 1">
+                                  </center>
+                                </a>
+                              </div>
+                              <div class="card-body ">
+                                <h5 class="card-title">{{p.descripcion}}</h5>
+                                <p class="card-text">${{p.precio}}</p>
+                                
+                                
+                                
+                              </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="col-6">
+                        <div class="card " style="width: 25rem; border: none;">
+                            <div class="container borde2 ">
+                              <a href="" >
+                                <center>
+                                  <img  src="{% static 'img/Huevo1.jpg' %}" class="card-img-top cardObras" alt="huevo 1">
+                                </center>
+                              </a>
+                            </div>
+                            <div class="card-body ">
+                              <h5 class="card-title">Caritas de conejito Extra Crocante</h5>
+                              <p class="card-text">$20.000</p>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- ---------------------------------------------------------- -->
+                    <div class="col-6">
+                        <div class="card " style="width: 25rem; border: none;">
+                            <div class="container borde2 ">
+                              <a href="" >
+                                <center>
+                                  <img  src="{% static 'img/Huevo2.jpg' %}" class="card-img-top cardObras" alt="huevo 1">
+                                </center>
+                              </a>
+                            </div>
+                            <div class="card-body ">
+                              <h5 class="card-title">Huevo de pascua relleno de Brownie</h5>
+                              <p class="card-text">$25.000</p>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- ---------------------------------------------------------- -->
+                    <div class="col-6">
+                        <div class="card " style="width: 25rem; border: none;">
+                            <div class="container borde2 ">
+                              <a href="" >
+                                <center>
+                                  <img  src="{% static 'img/Huevo4.jpg' %}" class="card-img-top cardObras" alt="huevo 1">
+                                </center>
+                              </a>
+                            </div>
+                            <div class="card-body ">
+                              <h5 class="card-title">Conejito de Chocolate</h5>
+                              <p class="card-text">$30.000</p>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- ---------------------------------------------------------- -->
+                    <div class="col-6">
+                        <div class="card " style="width: 25rem; border: none;">
+                            <div class="container borde2 ">
+                              <a href="" >
+                                <center>
+                                  <img  src="{% static 'img/Huevo3.jpg' %}" class="card-img-top cardObras" alt="huevo 1">
+                                </center>
+                              </a>
+                            </div>
+                            <div class="card-body ">
+                              <h5 class="card-title">Huevo de pascua 40% dulce de leche</h5>
+                              <p class="card-text">$12.000</p>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- ---------------------------------------------------------- -->
+    
+                </div>
+                
+            </div>
+        </center>
+        <!-- fin del carrusel de imagenes -->
+    </main>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+{% endblock %}
