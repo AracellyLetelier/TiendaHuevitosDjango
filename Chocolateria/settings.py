@@ -88,7 +88,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521/xe', 
-        'USER': 'c##chocolateria3',
+        'USER': 'chocolateria3',
         'PASSWORD': 'cho123',
         'TEST': {
             'USER': 'default_test',
@@ -137,7 +137,7 @@ LOGOUT_REDIRECT_URL=reverse_lazy('index')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'/static/'),)
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'Media')
 
